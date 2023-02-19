@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:08:35 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/18 23:44:59 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/19 16:57:14 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(void)
 		}
 		else if (input == "SEARCH")
 		{
-			;
+			pb.search();
 		}
 		else if (input == "EXIT")
 			;

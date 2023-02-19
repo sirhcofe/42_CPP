@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:08:45 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/18 23:44:40 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/19 17:34:34 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ private:
 public:
 	PhoneBook();
 	~PhoneBook();
-	void	addContact(void);
 	
+	void	addContact(void);
 	void	search(void);
 	void	startup(void);
 };

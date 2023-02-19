@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:08:37 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/18 23:46:19 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/19 17:32:44 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <cstring>
+#include <iomanip>
 
 class Contact
 {
@@ -30,7 +31,7 @@ public:
 	Contact();
 	~Contact();
 	void	init(void);
-	void	print(void);
+	void	print(int index);
 };
 
 #endif

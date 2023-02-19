@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:08:31 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/18 23:48:30 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/19 22:09:36 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,16 @@ PhoneBook::~PhoneBook()
 {
 }
 
-void	PhoneBook::_printContact(void)
+void	PhoneBook::search(void)
 {
 	int	i;
 
 	i = -1;
-	while (++i <= this->_index)
-		this->_contacts[i].print();
+	std::cout << "     index| firstname|  lastname|  nickname" << std::endl;
+	std::cout << "-------------------------------------------" << std::endl;
+	while (++i < this->_index)
+		this->_contacts[i].print(i);
+	std::cout << std::endl;
 }
 
 void	PhoneBook::addContact(void)

@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:08:39 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/18 23:48:33 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/19 22:07:19 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,23 @@ void	Contact::init(void)
 	this->_darksecret = this->_getInput("5. Leak a dark secret: ", 3);
 }
 
-void	Contact::print(void)
+void	Contact::print(int index)
 {
-	std::cout << this->_firstname << std::endl;
-	std::cout << this->_lastname << std::endl;
-	std::cout << this->_nickname << std::endl;
-	std::cout << this->_phonenum << std::endl;
-	std::cout << this->_darksecret << std::endl;
+	std::cout << std::setw(10) << index;
+	std::cout << "|";
+	if (this->_firstname.length() > 10)
+		std::cout << this->_firstname.substr(0, 9) << ".";
+	else if (this->_firstname.length() <= 10)
+		std::cout << std::setw(10) << this->_firstname.substr(0, 10);
+	std::cout << "|";
+	if (this->_lastname.length() > 10)
+		std::cout << this->_lastname.substr(0, 9) << ".";
+	else if (this->_lastname.length() <= 10)
+		std::cout << std::setw(10) << this->_lastname.substr(0, 10);
+	std::cout << "|";
+	if (this->_nickname.length() > 10)
+		std::cout << this->_nickname.substr(0, 9) << ".";
+	else if (this->_nickname.length() <= 10)
+		std::cout << std::setw(10) << this->_nickname.substr(0, 10);
+	std::cout << std::endl;
 }
