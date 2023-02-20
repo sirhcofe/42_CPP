@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:08:45 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/19 17:34:34 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/20 12:37:59 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ private:
 	Contact	_contacts[8];
 	int		_index;
 
-	void	_printContact(void);
+	std::string	_getInput(int maxiter);
 public:
 	PhoneBook();
 	~PhoneBook();

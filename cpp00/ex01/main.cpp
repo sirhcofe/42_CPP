@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:08:35 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/19 16:57:14 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/20 12:22:07 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ int	main(void)
 		else if (input == "SEARCH")
 		{
 			pb.search();
+			std::cout << C_GRN "\nSearch completed! Key in new command:\n" C_RST << std::endl;
 		}
-		else if (input == "EXIT")
-			;
-		else
+		else if (input != "EXIT")
 			std::cout << C_RED "Invalid input detected! Try again:" C_RST << std::endl;
 	}
+	std::cout << C_GRN "\nThanks for using crappy phonebook\n" C_RST << std::endl;
+	return (0);
 }
