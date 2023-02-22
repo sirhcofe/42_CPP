@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:08:31 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/20 12:38:12 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/21 13:16:34 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,20 @@ PhoneBook::~PhoneBook()
 {
 }
 
+int	PhoneBook::_strToint(std::string input)
+{
+	std::stringstream	num(input);
+	int					ret;
+
+	num >> ret;
+	return (ret);
+}
+
 std::string	PhoneBook::_getInput(int maxiter)
 {
-	int			i;
 	std::string	input;
+	int			i;
+	int			num;
 
 	std::cout << "Key in index to view full detail:" << std::flush;
 	std::getline(std::cin, input);
@@ -40,7 +50,8 @@ std::string	PhoneBook::_getInput(int maxiter)
 			i++;
 			if (i == (int)input.length())
 			{
-				if ((std::stoi(input) >= 0 && std::stoi(input) <= 7) && std::stoi(input) < maxiter)
+				num = this->_strToint(input);
+				if ((num >= 0 && num <= 7) && num < maxiter)
 					break ;
 				else
 					std::cout << C_RED "Index not found! Try again: " C_RST << std::flush;
@@ -68,7 +79,7 @@ void	PhoneBook::search(void)
 		this->_contacts[i].printAll(i);
 	std::cout << "-------------------------------------------" << std::endl;
 	input = this->_getInput(maxiter);
-	this->_contacts[std::stoi(input)].printSpecific();
+	this->_contacts[this->_strToint(input)].printSpecific();
 }
 
 void	PhoneBook::addContact(void)

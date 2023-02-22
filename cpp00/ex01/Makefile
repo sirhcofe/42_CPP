@@ -6,7 +6,7 @@
 #    By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/15 16:01:40 by chenlee           #+#    #+#              #
-#    Updated: 2023/02/17 19:16:14 by chenlee          ###   ########.fr        #
+#    Updated: 2023/02/20 20:21:10 by chenlee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,12 +24,12 @@ all:			$(NAME)
 
 $(NAME):		main.cpp $(OBJS)
 			@echo "Compiling: main.cpp"
-			@$(CC) $(FLAGS) main.cpp $(OBJS) -o $(NAME)
+			$(CC) $(FLAGS) main.cpp $(OBJS) -o $(NAME)
 
 $(OBJS_DIR)%.o:	%.cpp
 			mkdir -p $(OBJS_DIR)
 			@echo "Compiling: $<"
-			@$(CC) $(FLAGS) -c $< -o $@
+			$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 			rm -rf objects

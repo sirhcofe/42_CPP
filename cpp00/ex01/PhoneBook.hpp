@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:08:45 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/20 12:37:59 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/21 13:16:06 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PHONEBOOK_HPP
 
 # include "Contact.hpp"
+# include <string>
+# include <sstream>
 
 # define C_PUR	"\033[35m"
 # define C_BLU	"\x1B[34m"
@@ -29,6 +31,7 @@ private:
 	int		_index;
 
 	std::string	_getInput(int maxiter);
+	int			_strToint(std::string input);
 public:
 	PhoneBook();
 	~PhoneBook();
