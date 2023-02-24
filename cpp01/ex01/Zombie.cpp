@@ -5,21 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 18:00:34 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/24 14:58:46 by chenlee          ###   ########.fr       */
+/*   Created: 2023/02/24 14:53:35 by chenlee           #+#    #+#             */
+/*   Updated: 2023/02/24 16:19:50 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name)
+Zombie::Zombie()
 {
-	this->_name = name;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "Zombie " << this->_name << " destroyed" << std::endl;
 }
 
 void	Zombie::announce(void)
@@ -27,14 +25,29 @@ void	Zombie::announce(void)
 	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-Zombie* newZombie(std::string name)
+std::string	intToString(int num)
 {
-    Zombie* zombie = new Zombie(name);
-    return (zombie);
+	std::string			ret;
+	std::stringstream	ss;
+
+	ss << num;
+	ret = ss.str();
+	return (ret);
 }
 
-void	randomChump(std::string name)
+void	Zombie::setName(int i, std::string name)
 {
-    Zombie zombie(name);
-    zombie.announce();
+	this->_name = name + intToString(i);
+}
+
+Zombie*	zombieHorde(int N, std::string name)
+{
+	Zombie*	horde;
+	int		i;
+	
+	horde = new Zombie[N];
+	i = -1;
+	while (++i < N)
+		horde[i].setName(i, name);
+	return (horde);
 }

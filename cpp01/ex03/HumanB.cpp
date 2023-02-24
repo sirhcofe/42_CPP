@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 18:00:34 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/24 14:58:46 by chenlee          ###   ########.fr       */
+/*   Created: 2023/02/24 17:55:36 by chenlee           #+#    #+#             */
+/*   Updated: 2023/02/24 18:31:40 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie::Zombie(std::string name)
+HumanB::HumanB(std::string name)
 {
 	this->_name = name;
+	this->_weapn = NULL;
 }
 
-Zombie::~Zombie()
+HumanB::~HumanB()
 {
-	std::cout << "Zombie " << this->_name << " destroyed" << std::endl;
 }
 
-void	Zombie::announce(void)
+void	HumanB::attack(void)
 {
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	if (this->_weapn == NULL)
+		std::cout << "huh" << std::endl;
+	else
+		std::cout << C_BLU << this->_name << C_CYN " attacks with their " << C_RED << this->_weapn->getType() << C_RST << std::endl;
 }
 
-Zombie* newZombie(std::string name)
+void	HumanB::setWeapon(Weapon& type)
 {
-    Zombie* zombie = new Zombie(name);
-    return (zombie);
-}
-
-void	randomChump(std::string name)
-{
-    Zombie zombie(name);
-    zombie.announce();
+	this->_weapn = &type;
 }

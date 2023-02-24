@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 18:00:34 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/24 14:58:46 by chenlee          ###   ########.fr       */
+/*   Created: 2023/02/24 17:42:48 by chenlee           #+#    #+#             */
+/*   Updated: 2023/02/24 18:23:32 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-Zombie::Zombie(std::string name)
+HumanA::HumanA(std::string name, Weapon& type) : _weapn(type)
 {
 	this->_name = name;
 }
 
-Zombie::~Zombie()
+HumanA::~HumanA()
 {
-	std::cout << "Zombie " << this->_name << " destroyed" << std::endl;
 }
 
-void	Zombie::announce(void)
+void	HumanA::attack(void)
 {
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-Zombie* newZombie(std::string name)
-{
-    Zombie* zombie = new Zombie(name);
-    return (zombie);
-}
-
-void	randomChump(std::string name)
-{
-    Zombie zombie(name);
-    zombie.announce();
+	std::cout << C_BLU << this->_name << C_CYN " attacks with their " << C_RED << this->_weapn.getType() << C_RST << std::endl;
 }
