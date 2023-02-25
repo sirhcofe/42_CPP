@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 20:54:09 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/24 22:24:06 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/25 17:34:48 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,19 @@ void	readAndReplace(std::ifstream& in_file, std::ofstream& out_file, char **argv
 	std::string	str1(argv[2]);
 	std::string str2(argv[3]);
 	size_t		pos;
+	size_t		index;
 
 	while (std::getline(in_file, line))
 	{
-		pos = 0;
-		while ((pos = line.find(str1, pos)) != std::string::npos)
+		index = 0;
+		while (1)
 		{
-			line.replace(pos, str1.length(), str2);
-			pos += str2.length();
+			pos = line.find(str1, index);
+			if (pos == std::string::npos)
+				break ;
+			line.erase(pos, str1.length());
+			line.insert(pos, str2);
+			index = pos + str2.length();
 		}
 		out_file << line << std::endl;
 	}
