@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 17:51:07 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/25 19:11:58 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/02/27 09:19:14 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,5 @@ void	Harl::complain(std::string level)
 			return ;
 		}
 	}
-	std::cout << "zzz" << std::endl;
+	std::cout << "No understand what you say" << std::endl;
 }

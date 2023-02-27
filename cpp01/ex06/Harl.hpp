@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/25 17:51:18 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/27 09:45:39 by chenlee          ###   ########.fr       */
+/*   Created: 2023/02/27 09:27:32 by chenlee           #+#    #+#             */
+/*   Updated: 2023/02/27 09:49:28 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ public:
 	~Harl();
 	
 	void	complain(std::string level);
+	int		compare(std::string input, std::string ref);
 };
 
 #endif
