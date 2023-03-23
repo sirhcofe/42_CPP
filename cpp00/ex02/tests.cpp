@@ -15,10 +15,21 @@
 
 int		main(void)
 {
+	/**
+	 * std::vector is a sequence container that can store elements of type Account::t
+	 * and provide dynamic memory management.
+	*/
 	typedef std::vector<Account::t>							  accounts_t;
 	typedef std::vector<int>								  ints_t;
 	typedef std::pair<accounts_t::iterator, ints_t::iterator> acc_int_t;
 
+	/**
+	 * The two arguments passed to the constructor of Account_t specify the range of
+	 * values to be inserted into the accounts vector. Specifically, the first argument
+	 * amounts is a pointer to the beginning of an array, and the second argument
+	 * amounts + amounts_size is a pointer to the end of the array (assuming amounts_size
+	 * is the number of elements in the amounts array).
+	*/
 	int	const				amounts[]	= {42, 54, 957, 432, 1234, 0, 754, 16576};
 	size_t const			amounts_size(sizeof(amounts) / sizeof(int));
 	accounts_t				accounts(amounts, amounts + amounts_size);
