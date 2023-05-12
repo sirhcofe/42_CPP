@@ -5,28 +5,33 @@
 #                                                     +:+ +:+         +:+      #
 #    By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/01 19:29:02 by chenlee           #+#    #+#              #
-#    Updated: 2023/05/02 18:00:44 by chenlee          ###   ########.fr        #
+#    Created: 2023/05/08 20:41:03 by chenlee           #+#    #+#              #
+#    Updated: 2023/05/08 20:46:10 by chenlee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	a.out
+NAME		=	Point
 
 CC			=	c++
 FLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
 
+SRC			=	Fixed.cpp Point.cpp
+OBJS_DIR	=	objects/
+OBJS		=	$(addprefix $(OBJS_DIR), $(SRC:.cpp=.o))
+
 all:			$(NAME)
 
-$(NAME):		main.cpp Fixed.o
+$(NAME):		main.cpp $(OBJS)
 			@echo "Compiling: main.cpp"
-			@$(CC) $(FLAGS) main.cpp Fixed.o -o $(NAME)
+			@$(CC) $(FLAGS) main.cpp $(OBJS) -o $(NAME)
 
-Fixed.o:		Fixed.cpp
+$(OBJS_DIR)%.o:	%.cpp
+			@mkdir -p $(OBJS_DIR)
 			@echo "Compiling: $<"
 			@$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-			@rm -rf Fixed.o
+			@rm -rf objects
 
 fclean:			clean
 			@rm -rf $(NAME)

@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/01 19:03:11 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/02 18:40:43 by chenlee          ###   ########.fr       */
+/*   Created: 2023/05/08 20:39:10 by chenlee           #+#    #+#             */
+/*   Updated: 2023/05/13 00:03:22 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#include "Point.hpp"
 
-#include <iostream>
-
-class Fixed
+int	main()
 {
-	private:
-		int					_value;
-		static const int	_bits = 8;
+	Point const a(-8.0, 3.0);
+	Point const b(4.0, 5.0);
+	Point const c(8.0, -3.0);
+	Point const point(-8.0, 3.0);
 
-	public:
-		Fixed();
-		Fixed(const Fixed& old);
-		~Fixed();
-
-		Fixed&	operator = (const Fixed& old);
-		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
-};
-
-#endif
+	std::cout << bsp(a, b, c, point) << std::endl;
+}
