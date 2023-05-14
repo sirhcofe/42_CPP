@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 19:09:56 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/13 00:02:34 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/13 22:25:18 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ Point::Point(float x, float y) : _x(x), _y(y)
 
 Point::Point(const Point& old) : _x(old._x), _y(old._y)
 {
+}
+
+Point&	Point::operator = (const Point& old)
+{
+	if (this != &old)
+	{
+		const_cast<Fixed&>(_x) = old._x;
+		const_cast<Fixed&>(_y) = old._y;
+	}
+	return (*this);
 }
 
 Point::~Point()
