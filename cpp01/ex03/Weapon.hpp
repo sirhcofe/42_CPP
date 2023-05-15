@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 17:06:33 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/24 18:20:47 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/15 18:00:38 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ private:
 public:
 	Weapon(std::string type);
 	~Weapon();
-	std::string		getType(void) const;
-	void			setType(std::string type);
+	const std::string&	getType(void);
+	void				setType(std::string type);
 };
 
 #endif

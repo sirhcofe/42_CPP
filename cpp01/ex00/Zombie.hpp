@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 18:00:00 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/24 14:30:36 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/15 18:01:08 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 class Zombie
 {
 private:
-    std::string _name;
+	std::string _name;
 public:
-    Zombie(std::string name);
-    ~Zombie();
+	Zombie(std::string name);
+	~Zombie();
 
 	void	announce(void);
 };
