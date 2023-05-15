@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 16:53:52 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/24 17:03:00 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/15 14:52:54 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int	main(void)
 	std::string&	stringREF = str;
 
 	std::cout << "Address of string: " << &str << std::endl;
-	std::cout << "Address of strPTR: " << stringPTR << std::endl;
+	std::cout << "Address of strPTR: " << &stringPTR << std::endl;
+	std::cout << "Pointed by strPTR: " << stringPTR << std::endl;
 	std::cout << "Address of strREF: " << &stringREF << std::endl;
 
 	std::cout << std::endl;

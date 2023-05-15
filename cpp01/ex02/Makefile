@@ -6,11 +6,11 @@
 #    By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/24 16:51:47 by chenlee           #+#    #+#              #
-#    Updated: 2023/02/24 17:03:30 by chenlee          ###   ########.fr        #
+#    Updated: 2023/05/15 14:50:44 by chenlee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	Brain
+NAME		=	a.out
 
 CC			=	c++
 FLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic

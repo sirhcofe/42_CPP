@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 20:54:09 by chenlee           #+#    #+#             */
-/*   Updated: 2023/02/25 17:34:48 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/15 15:24:11 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,26 @@ void	readAndReplace(std::ifstream& in_file, std::ofstream& out_file, char **argv
 	size_t		pos;
 	size_t		index;
 
+	/* loop that reads characters from input stream until "\n" deliminator is found */
 	while (std::getline(in_file, line))
 	{
 		index = 0;
 		while (1)
 		{
+			/**
+			 * Searches the string for the first occurrence of the sequence, "index"
+			 * denotes the position of the first character in the string to be considered
+			 * in the search.
+			 * Return:
+			 * The position of the first character of the first match.
+			 * If no matches were found, the function returns string::npos.
+			*/
 			pos = line.find(str1, index);
 			if (pos == std::string::npos)
 				break ;
+			/* Erases part of the string, reducing its length */
 			line.erase(pos, str1.length());
+			/* Inserts additional characters into the string right before the character indicated by pos */
 			line.insert(pos, str2);
 			index = pos + str2.length();
 		}
