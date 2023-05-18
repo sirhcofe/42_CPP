@@ -6,13 +6,13 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:06:55 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/17 16:59:59 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/18 18:44:32 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30), _hp(100), _ad(30)
 {
 	std::cout << "FragTrap constructor called!" << std::endl;
 }
@@ -50,5 +50,13 @@ FragTrap::~FragTrap()
 
 void	FragTrap::highFivesGuys()
 {
-	std::cout << "FragTrap " C_BLU << this->_name << C_RST " tried to high five but was left hanging!" << std::endl;
+	if (this->_hp == 0)
+		std::cout << "FragTrap " C_BLU << this->_name << C_RST " can't high five because he is dead!" << std::endl;
+	else if (this->_mp == 0)
+		std::cout << "FragTrap " C_BLU << this->_name << C_RST " can't high five because he ran out of MP!" << std::endl;
+	else
+	{
+		std::cout << "FragTrap " C_BLU << this->_name << C_RST " tried to high five but was left hanging!" << std::endl;
+		this->_mp -= 1;
+	}
 }

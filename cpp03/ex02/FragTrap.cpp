@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:06:55 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/17 15:46:16 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/18 18:43:24 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,13 @@ void	FragTrap::attack(const std::string& target)
 
 void	FragTrap::highFivesGuys()
 {
-	std::cout << "FragTrap " C_BLU << this->_name << C_RST " tried to high five but was left hanging!" << std::endl;
+	if (this->_hp == 0)
+		std::cout << "FragTrap " C_BLU << this->_name << C_RST " can't high five because he is dead!" << std::endl;
+	else if (this->_mp == 0)
+		std::cout << "FragTrap " C_BLU << this->_name << C_RST " can't high five because he ran out of MP!" << std::endl;
+	else
+	{
+		std::cout << "FragTrap " C_BLU << this->_name << C_RST " tried to high five but was left hanging!" << std::endl;
+		this->_mp -= 1;
+	}
 }

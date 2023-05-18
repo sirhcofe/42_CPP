@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 18:43:22 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/14 16:58:34 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/18 18:38:58 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->_mp == 0)
 		std::cout << "ClapTrap " C_BLU << this->_name << C_RST " tried to repair himself but he has already ran out of MP!" << std::endl;
+	else if (this->_hp == 0)
+		std::cout << "ClapTrap " C_BLU << this->_name << C_RST " can't repair himself because he is already dead!" << std::endl;
 	else
 	{
 		std::cout << "ClapTrap " C_BLU << this->_name << C_RST " repairs himself restoring " C_GRN << amount << C_RST " amount of HP!" << std::endl;

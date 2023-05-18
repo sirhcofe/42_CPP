@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 23:08:18 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/17 15:42:27 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/18 18:43:54 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,10 @@ void	ScavTrap::guardGate()
 	else if (this->_mp == 0)
 		std::cout << "ScavTrap " C_PUR << this->_name << C_RST " guard failed as he ran out of MP!" << std::endl;
 	else
+	{
 		std::cout << "ScavTrap " C_BLU << this->_name << C_RST " is in Guard Gate mode!" << std::endl;
+		this->_mp -= 1;
+	}
 }
 
 void	ScavTrap::attack(const std::string& target)
