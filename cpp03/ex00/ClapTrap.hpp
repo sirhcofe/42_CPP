@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 17:02:17 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/14 16:15:54 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:31:39 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class ClapTrap
 		int			_ad;
 
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap& old);
 		~ClapTrap();

@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 23:08:19 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/17 16:51:21 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:25:21 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class ScavTrap : virtual public ClapTrap
 	protected:
 		int	_mp;
 	public:
+		ScavTrap();
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap& old);
 		~ScavTrap();

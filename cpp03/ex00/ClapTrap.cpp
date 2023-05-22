@@ -6,15 +6,20 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 18:43:22 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/18 18:38:58 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:32:35 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap() : _name(""), _hp(0), _mp(0), _ad(0)
+{
+	std::cout << "ClapTrap default constructor called!" << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _mp(10), _ad(10)
 {
-	std::cout << "Default constructor called!" << std::endl;
+	std::cout << "ClapTrap constructor called!" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& old) : _name(old._name), _hp(old._hp), _mp(old._mp), _ad(old._ad)

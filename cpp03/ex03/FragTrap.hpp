@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 18:12:21 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/18 18:44:54 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:23:53 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class FragTrap : virtual public ClapTrap
 		int	_hp;
 		int	_ad;
 	public:
+		FragTrap();
 		FragTrap(std::string name);
 		FragTrap(const FragTrap& old);
 		~FragTrap();
