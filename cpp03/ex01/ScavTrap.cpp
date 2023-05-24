@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 23:08:18 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/22 17:33:46 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:50:28 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap&	ScavTrap::operator = (const ScavTrap& old)
 {
+	std::cout << "ScavTrap copy assignment operator called!" << std::endl;
 	if (this != &old)
 	{
 		ClapTrap::operator = (old);

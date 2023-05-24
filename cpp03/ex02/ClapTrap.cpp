@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 18:43:22 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/22 17:32:56 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:49:50 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ ClapTrap::~ClapTrap()
 
 ClapTrap&	ClapTrap::operator = (const ClapTrap& old)
 {
-	std::cout << "ClapTrap copy constructor called!" << std::endl;
+	std::cout << "ClapTrap copy assignment operator called!" << std::endl;
 	if (this != &old)
 	{
 		this->_name = old._name;
