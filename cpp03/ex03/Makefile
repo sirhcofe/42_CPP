@@ -6,14 +6,14 @@
 #    By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/14 16:42:59 by chenlee           #+#    #+#              #
-#    Updated: 2023/05/17 17:06:41 by chenlee          ###   ########.fr        #
+#    Updated: 2023/05/22 18:02:46 by chenlee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	DiamondTrap
 
 CC			=	c++
-FLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
+FLAGS		=	-Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -pedantic
 
 SRC			=	ClapTrap.cpp FragTrap.cpp ScavTrap.cpp DiamondTrap.cpp
 OBJS_DIR	=	objects/

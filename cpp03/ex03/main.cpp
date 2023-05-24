@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:58:45 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/17 17:15:58 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:56:56 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	main()
 {
 	DiamondTrap trap("Jason");
 
+	trap.print();
 	trap.attack("Enemy");
 	trap.takeDamage(20);
 	trap.beRepaired(10);

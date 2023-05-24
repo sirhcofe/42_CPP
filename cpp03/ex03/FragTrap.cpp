@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:06:55 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/22 17:23:50 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:56:33 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ FragTrap::FragTrap() : ClapTrap("", 100, 100, 30)
 	std::cout << "FragTrap default constructor called!" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30), _hp(100), _ad(30)
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
 {
 	std::cout << "FragTrap constructor called!" << std::endl;
 }

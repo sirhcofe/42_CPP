@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:50:37 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/17 16:56:58 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:57:18 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,13 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		DiamondTrap&	operator = (const DiamondTrap& old);
 
 		void	whoAmI();
+		void	print()
+		{
+			std::cout << this->_name << std::endl;
+			std::cout << this->_hp << std::endl;
+			std::cout << this->_mp << std::endl;
+			std::cout << this->_ad << std::endl;
+		}
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 23:08:18 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/22 17:11:33 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/22 17:56:28 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ScavTrap::ScavTrap() : ClapTrap("", 100, 50, 20)
 	std::cout << "ScavTrap default constructor called!" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20), _mp(50)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
 {
 	std::cout << "ScavTrap constructor called!" << std::endl;
 }
@@ -34,6 +34,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap&	ScavTrap::operator = (const ScavTrap& old)
 {
+	std::cout << "ScavTrap copy assignment operator called!" << std::endl;
 	if (this != &old)
 	{
 		ClapTrap::operator = (old);
