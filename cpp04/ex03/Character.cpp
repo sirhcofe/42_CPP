@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 14:47:31 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/24 17:41:00 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/24 18:36:32 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,13 @@ void	Character::equip(AMateria* m)
 	{
 		int	i;
 		for (i = 0; i < 4; i++)
+		{
 			if (this->_inventory[i] == NULL)
+			{
 				this->_inventory[i] = m;
+				break ;
+			}
+		}
 		if (i == 4)
 			std::cout << C_RED "Equip failed! Materia inventory full!" C_RST << std::endl;
 		else

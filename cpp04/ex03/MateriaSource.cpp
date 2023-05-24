@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:57:35 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/24 17:41:09 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/24 18:31:34 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ MateriaSource::MateriaSource(const MateriaSource& other)
 MateriaSource::~MateriaSource()
 {
 	// std::cout << "MateriaSource destructor called!" << std::endl;
-	for (int i = 0; i < 4; i++)
-		if (this->_template[i] != NULL)
-			delete this->_template[i];
+	// for (int i = 0; i < 4; i++)
+	// 	if (this->_template[i] != NULL)
+	// 		delete this->_template[i];
 }
 
 MateriaSource&	MateriaSource::operator=(const MateriaSource& other)
@@ -67,12 +67,21 @@ void	MateriaSource::learnMateria(AMateria* m)
 	}
 }
 
+std::string	toLowCase(std::string const& type)
+{
+	std::string	ret = type;
+
+	for (std::string::size_type i = 0; i < type.length(); i++)
+		ret[i] = static_cast<char>(tolower(type[i]));
+	return (ret);
+}
+
 AMateria*	MateriaSource::createMateria(std::string const& type)
 {
 	int	i;
 	for (i = 0; i < 4; i++)
 	{
-		if (this->_template[i]->getType() == type)
+		if (this->_template[i] != NULL && this->_template[i]->getType() == toLowCase(type))
 		{
 			std::cout << C_CYN "Create Materia successful!" C_RST << std::endl;
 			return (this->_template[i]);

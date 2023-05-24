@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:46:37 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/24 15:57:51 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/24 18:10:04 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define MATERIASOURCE_HPP
 
 #include "IMateriaSource.hpp"
+#include <cctype>
+#include <string>
 
 class MateriaSource : public IMateriaSource
 {

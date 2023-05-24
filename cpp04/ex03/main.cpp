@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 16:41:06 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/24 17:43:36 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/24 18:30:50 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 int	main()
 {
+	std::cout << "RUNNING PDF TESTERS" << std::endl;
 	// From pdf
 	{
 		IMateriaSource* src = new MateriaSource();
@@ -40,6 +41,7 @@ int	main()
 		delete me;
 		delete src;
 	}
+	std::cout << "\nTESTING ERROR HANDLING" << std::endl;
 	// Error handling
 	{
 		IMateriaSource	*src = new MateriaSource();
@@ -54,7 +56,8 @@ int	main()
 
 		p1->use(3, *p2);
 		tmp = src->createMateria("Water");
-		std::cout << tmp << std::endl;
+		
+		std::cout << std::endl;
 
 		tmp = src->createMateria("Ice");
 		p1->equip(tmp);
@@ -78,6 +81,7 @@ int	main()
 		delete p1;
 		delete p2;
 		delete src;
+		system("leaks ff42");
 		return 0;
 	}
 }

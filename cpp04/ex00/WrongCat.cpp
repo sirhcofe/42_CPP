@@ -6,13 +6,13 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 20:37:31 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/23 18:54:14 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/24 18:39:10 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat() : WrongAnimal("WrongCat")
+WrongCat::WrongCat() : WrongAnimal("wrongcat")
 {
 	std::cout << "WrongCat default constructor called!" << std::endl;
 }

@@ -6,13 +6,13 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 20:34:38 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/23 22:21:37 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/24 18:39:30 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() : _type("Some random WrongAnimal")
+WrongAnimal::WrongAnimal() : _type("Some random wronganimal")
 {
 	std::cout << "WrongAnimal default constructor called!" << std::endl;
 }

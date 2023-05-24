@@ -6,12 +6,12 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 19:58:22 by chenlee           #+#    #+#             */
-/*   Updated: 2023/05/23 16:56:48 by chenlee          ###   ########.fr       */
+/*   Updated: 2023/05/24 18:42:14 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGANIMAL_HPP
-#define WRONGANIMEL_HPP
+#define WRONGANIMAL_HPP
 
 # define C_PUR	"\033[35m"
 # define C_BLU	"\x1B[34m"
@@ -30,11 +30,11 @@ class WrongAnimal
 		WrongAnimal();
 		WrongAnimal(std::string name);
 		WrongAnimal(const WrongAnimal& old);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 		WrongAnimal&	operator=(const WrongAnimal& old);
 
-		void		makeSound() const;
-		std::string	getType() const;
+		virtual void	makeSound() const;
+		std::string		getType() const;
 };
 
 #endif
